@@ -18,6 +18,9 @@ public class MyDeadboltHandler extends AbstractDeadboltHandler {
 
 	@Override
 	public CompletionStage<Optional<Subject>> getSubject(Context context) {
+		
+		play.db.jpa.JPA.em(); // Causes "java.lang.RuntimeException: No EntityManager found in the context..."
+		
 		return CompletableFuture.completedFuture(Optional.ofNullable(new MySubject()));
 	}
 }

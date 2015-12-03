@@ -12,6 +12,9 @@ import views.html.*;
 public class Application extends Controller {
 
     public Result index() {
+    	
+    	play.db.jpa.JPA.em(); // Causes "java.lang.RuntimeException: No EntityManager found in the context..."
+    	
         return ok(index.render("Your new application is ready."));
     }
 
