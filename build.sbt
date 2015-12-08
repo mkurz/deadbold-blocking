@@ -1,4 +1,4 @@
-name := """deadbold-blocking"""
+name := """deadbold-blocking-24"""
 
 version := "1.0-SNAPSHOT"
 
@@ -10,7 +10,7 @@ libraryDependencies ++= Seq(
   javaJdbc,
   javaJpa,
   "org.hibernate" % "hibernate-entitymanager" % "5.0.4.Final",
-  "be.objectify" %% "deadbolt-java" % "2.5.0-SNAPSHOT"
+  "be.objectify" %% "deadbolt-java" % "2.4.3"
 )
 
 resolvers += Resolver.sonatypeRepo("snapshots")
