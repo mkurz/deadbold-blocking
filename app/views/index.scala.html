@@ -1,7 +1,14 @@
+@import be.objectify.deadbolt.java.views.html._
+@import be.objectify.deadbolt.core.utils.TemplateUtils._
 @(message: String)
 
 @main("Welcome to Play") {
 
-    @play20.welcome(message, style = "Java")
+	@restrict(la(as("mygroup"))) {
+		This content will be visible if the user has the "mygroup" role.
+	}
+	@restrict(la(as("foo"))) {
+		This content will be visible if the user has the "foo" role.
+	}
 
 }
